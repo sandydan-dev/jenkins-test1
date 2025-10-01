@@ -12,13 +12,14 @@ pipeline {
     stage("build"){
       steps{
         echo "Build Job"
-        sh "mvn clean package" 
+        sh "mvn clean package -Dmaven.test.skip=true" 
       }
     }
 
     stage("test"){
       steps{
         echo "Test Job"
+        sh "mvn surefire-report:report"
       }
     }
     
