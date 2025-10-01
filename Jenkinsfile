@@ -3,7 +3,7 @@ pipeline {
 
   // environment
   environment {
-    PATH="/opt/maven/bin:$PATH
+    PATH="/opt/maven/bin:$PATH"
   }
 
   // stage block start
@@ -26,7 +26,7 @@ pipeline {
    // sonar analysis
    stage("Sonarqube Analysis"){
       environment {
-         scannerHome = tool "sandy-sonar-scanner"
+         scannerHome = tool "sandy-sonar-scanner -X"
       }
 
       // steps to sonar server
