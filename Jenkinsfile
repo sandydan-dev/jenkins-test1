@@ -7,6 +7,8 @@ pipeline {
     stage("build"){
       steps{
         echo "Build Job"
+        sh "date"
+        sh "cal"
       }
     }
 
