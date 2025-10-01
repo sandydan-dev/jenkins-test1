@@ -26,7 +26,7 @@ pipeline {
    // sonar analysis
    stage("Sonarqube Analysis"){
       environment {
-         scannerHome = tool "sandy-sonar-scanner -X"
+         scannerHome = tool "sandy-sonar-scanner"
       }
 
       // steps to sonar server
